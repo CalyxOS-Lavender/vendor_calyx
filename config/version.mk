@@ -12,6 +12,17 @@ CALYXOS_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_V
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.calyxos.version=$(CALYXOS_VERSION)
 
+# Signing
+ifneq (eng,$(TARGET_BUILD_VARIANT))
+ifneq (,$(wildcard vendor/calyx/signing/keys/releasekey.pk8))
+PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/calyx/signing/keys/releasekey
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.oem_unlock_supported=1
+endif
+ifneq (,$(wildcard vendor/calyx/signing/keys/otakey.x509.pem))
+PRODUCT_OTA_PUBLIC_KEYS := vendor/calyx/signing/keys/otakey.x509.pem
+endif
+endif
+
 # BUILD_NUMBER
 # See $top/calyx/scripts/release/version.sh
 # last 2 of year,    yy * 1000000
