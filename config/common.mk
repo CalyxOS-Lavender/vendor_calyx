@@ -109,6 +109,7 @@ PRODUCT_PACKAGES += \
     Aperture \
     AudioFX \
     AuroraStorePrivilegedExtension \
+    AvatarPicker \
     BatteryStatsViewer \
     Bellis \
     Datura \
