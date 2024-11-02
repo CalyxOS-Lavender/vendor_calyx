@@ -121,7 +121,7 @@ PRODUCT_PACKAGES += \
     Panic \
     TrichromeChrome \
     TrichromeWebView \
-    Eleven \
+    Twelve \
     Recorder \
     Seedvault \
     Ripple
