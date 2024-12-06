@@ -13,10 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Get the directory for this file, and use that instead of a fixed path.
-local_dir := $(dir $(lastword $(MAKEFILE_LIST)))
 
-# Attach the flag value definitions to the various release configurations.
-$(call declare-release-config, ap4a, $(local_dir)build_config/ap4a.scl)
+load("//build/make/core/release_config.scl", "value")
 
-local_dir :=
+values = [
+    # keep-sorted start numeric=yes
+    value("RELEASE_ACONFIG_VALUE_SETS", "aconfig_value_set-calyx-ap4a"),
+    # keep-sorted end
+]
