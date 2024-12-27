@@ -122,6 +122,7 @@ PRODUCT_PACKAGES += \
     Bellis \
     Camelot \
     Datura \
+    ESpeakNG \
     Etar \
     ExactCalculator \
     F-DroidPrivilegedExtension \
