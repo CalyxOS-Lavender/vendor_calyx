@@ -17,6 +17,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigStandaloneEntriesOverlay \
     CellBroadcastReceiverOverlay \
     Launcher3Overlay \
+    NfcOverlay \
     PermissionControllerOverlay
 
 # Translations
