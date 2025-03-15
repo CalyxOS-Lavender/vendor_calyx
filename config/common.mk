@@ -53,7 +53,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Customization
 PRODUCT_PACKAGES += \
-    CalyxNavigationBarNoHint \
     IconPackCircularAndroidOverlay \
     IconPackCircularLauncherOverlay \
     IconPackCircularSettingsOverlay \
