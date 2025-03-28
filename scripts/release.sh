@@ -56,7 +56,7 @@ elif [[ $DEVICE == FP5 ]]; then
 elif [[ $DEVICE == devon || $DEVICE == hawao || $DEVICE == rhode ]]; then
   MOTO_BENGAL="true"
   QCOM_FIRMWARE="true"
-elif [[ $DEVICE == fogos || $DEVICE == bangkk ]]; then
+elif [[ $DEVICE == fogos || $DEVICE == bangkk || $DEVICE == fogo ]]; then
   MOTO_BLAIR="true"
   QCOM_FIRMWARE="true"
 elif [[ $DEVICE == otter ]]; then
@@ -80,7 +80,7 @@ elif [[
   $DEVICE == FP4 ||
   $DEVICE == FP5 ||
   $DEVICE == devon || $DEVICE == hawao || $DEVICE == rhode ||
-  $DEVICE == fogos || $DEVICE == bangkk ||
+  $DEVICE == fogos || $DEVICE == bangkk || $DEVICE == fogo ||
   $DEVICE == otter
 ]]; then
   VERITY_SWITCHES=(--avb_vbmeta_key "$KEY_DIR/avb.pem" --avb_vbmeta_algorithm SHA256_RSA4096
@@ -117,7 +117,7 @@ if [[
   $DEVICE == FP4 ||
   $DEVICE == FP5 ||
   $DEVICE == devon || $DEVICE == hawao || $DEVICE == rhode ||
-  $DEVICE == fogos || $DEVICE == bangkk
+  $DEVICE == fogos || $DEVICE == bangkk || $DEVICE == fogo
 ]]; then
   AVB_CUSTOM_KEY="$PWD/$KEY_DIR/avb_custom_key.img"
   for apex in "${apexes[@]}"; do
@@ -168,7 +168,7 @@ if [[ -n $AVB_ROLLBACK_INDEX_OVERRIDE ]]; then
     $DEVICE == FP4 ||
     $DEVICE == FP5 ||
     $DEVICE == devon || $DEVICE == hawao || $DEVICE == rhode ||
-    $DEVICE == fogos || $DEVICE == bangkk ||
+    $DEVICE == fogos || $DEVICE == bangkk || $DEVICE == fogo ||
     $DEVICE == otter
   ]]; then
     EXTRA_SIGNING_ARGS+=(--avb_rollback_index_override $AVB_ROLLBACK_INDEX_OVERRIDE)
