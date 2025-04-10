@@ -1,4 +1,4 @@
-ifeq ($(filter-out crosshatch blueline bonito sargo coral flame sunfish redfin bramble barbet oriole raven, $(VENDOR_DEVICE)),)
+ifeq ($(filter-out redfin bramble barbet oriole raven, $(VENDOR_DEVICE)),)
 COMPAT_AUDIO := true
 endif
 
